@@ -50,5 +50,5 @@ RUN chmod +x /bin/unlock_emulator
 
 #Label
 MAINTAINER Catbag <developer@catbag.com.br>
-LABEL Version="0.1.2" \
+LABEL Version="0.1.3" \
       Description="Android SDK and emulator environment"
