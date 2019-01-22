@@ -33,9 +33,6 @@ ENV PATH $PATH:$ANDROID_HOME/emulator
 ENV EMULATOR_IMAGE "system-images;android-24;google_apis;x86_64"
 RUN yes | sdkmanager $EMULATOR_IMAGE --verbose
 
-# Copy Qt library files to system folder
-RUN cp -a /opt/android/emulator/lib64/qt/lib/. /usr/lib/x86_64-linux-gnu/
-
 # Creating a emulator with sdcard
 RUN echo "no" | avdmanager -v create avd -n test -k $EMULATOR_IMAGE -c 100M
 
